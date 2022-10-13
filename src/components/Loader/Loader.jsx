@@ -1,18 +1,12 @@
-import { ProgressBar } from 'react-loader-spinner';
-import style from './Loader.module.css';
-import PropTypes from 'prop-types';
+import s from './Loader.module.css';
 
-const Loader = ({ color, size }) => {
-  return (
-    <div className={style.Loader}>
-      <ProgressBar color={color} size={size} />
-    </div>
-  );
-};
-
-Loader.propTypes = {
-  color: PropTypes.string.isRequired,
-  size: PropTypes.number.isRequired,
-};
+const Loader = () => (
+  <div className={s.ldsEllipsis}>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+);
 
 export default Loader;
